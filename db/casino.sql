@@ -154,6 +154,7 @@ CREATE TABLE `jugadores` (
   `jugador_id` int(11) NOT NULL,
   `nombre_usuario` varchar(100) NOT NULL,
   `correo_jugador` varchar(100) NOT NULL,
+  `telefono` varchar(20) NOT NULL,
   `cedula_jugador` varchar(20) NOT NULL,
   `password_jugador` varchar(255) NOT NULL,
   `fondos_jugador` double NOT NULL DEFAULT 0,
@@ -164,29 +165,29 @@ CREATE TABLE `jugadores` (
 -- Volcado de datos para la tabla `jugadores`
 --
 
-INSERT INTO `jugadores` (`jugador_id`, `nombre_usuario`, `correo_jugador`, `cedula_jugador`, `password_jugador`, `fondos_jugador`, `juego_id`) VALUES
-(1, 'Juan Perez', 'juan.perez@example.com', 'V12345678', 'juanP123', 150, 1),
-(2, 'Maria Lopez', 'maria.lopez@example.com', 'V87654321', 'mariaL456', 320, 2),
-(3, 'Carlos Garcia', 'carlos.garcia@example.com', 'V11223344', 'carlosG789', 90, 3),
-(4, 'Pedro Alvarez', 'pedro.alvarez@example.com', 'V11223355', 'pedroA123', 200, 4),
-(5, 'Luis Ortega', 'luis.ortega@example.com', 'V22334466', 'luisO456', 250, 5),
-(6, 'Sonia Castro', 'sonia.castro@example.com', 'V33445577', 'soniaC789', 80, 6),
-(7, 'Rosa Martinez', 'rosa.martinez@example.com', 'V44556688', 'rosaM123', 120, 7),
-(8, 'Jorge Ruiz', 'jorge.ruiz@example.com', 'V55667799', 'jorgeR456', 300, 8),
-(9, 'Ana Torres', 'ana.torres@example.com', 'V66778800', 'anaT789', 150, 9),
-(10, 'Felipe Hernandez', 'felipe.hernandez@example.com', 'V77889911', 'felipeH123', 200, 10),
-(11, 'Gabriela Romero', 'gabriela.romero@example.com', 'V88990022', 'gabrielaR456', 90, 11),
-(12, 'Ricardo Silva', 'ricardo.silva@example.com', 'V99001133', 'ricardoS789', 160, 12),
-(13, 'Natalia Rivas', 'natalia.rivas@example.com', 'V00112244', 'nataliaR123', 250, 13),
-(14, 'Julian Gomez', 'julian.gomez@example.com', 'V11223366', 'julianG456', 170, 14),
-(15, 'Camila Castro', 'camila.castro@example.com', 'V22334477', 'camilaC789', 80, 15),
-(16, 'Sebastian Vasquez', 'sebastian.vasquez@example.com', 'V33445588', 'sebastianV123', 220, 16),
-(17, 'Daniela Mora', 'daniela.mora@example.com', 'V44556699', 'danielaM456', 130, 17),
-(18, 'Mauricio Jimenez', 'mauricio.jimenez@example.com', 'V55667700', 'mauricioJ789', 140, 18),
-(19, 'Laura Gomez', 'laura.gomez@example.com', 'V66778811', 'lauraG123', 250, 19),
-(20, 'Andres Paredes', 'andres.paredes@example.com', 'V77889922', 'andresP456', 90, 20),
-(21, 'Valeria Morales', 'valeria.morales@example.com', 'V88990033', 'valeriaM789', 110, 1),
-(22, 'Javier Correa', 'javier.correa@example.com', 'V99001144', 'javierC123', 200, 2);
+INSERT INTO `jugadores` (`jugador_id`, `nombre_usuario`, `correo_jugador`, `cedula_jugador`, `password_jugador`, `fondos_jugador`, `juego_id`,`telefono`) VALUES
+(1, 'Juan Perez', 'juan.perez@example.com', 'V12345678', 'juanP123', 150, 1,`(614) 530-6819`),
+(2, 'Maria Lopez', 'maria.lopez@example.com', 'V87654321', 'mariaL456', 320, 2,`(550) 947-1827`),
+(3, 'Carlos Garcia', 'carlos.garcia@example.com', 'V11223344', 'carlosG789', 90, 3,`(789) 892-8633`),
+(4, 'Pedro Alvarez', 'pedro.alvarez@example.com', 'V11223355', 'pedroA123', 200, 4,`(753) 478-3712`),
+(5, 'Luis Ortega', 'luis.ortega@example.com', 'V22334466', 'luisO456', 250, 5,`(233) 683-4097`),
+(6, 'Sonia Castro', 'sonia.castro@example.com', 'V33445577', 'soniaC789', 80, 6,`(817) 683-6133`),
+(7, 'Rosa Martinez', 'rosa.martinez@example.com', 'V44556688', 'rosaM123', 120, 7,`(510) 774-2279`),
+(8, 'Jorge Ruiz', 'jorge.ruiz@example.com', 'V55667799', 'jorgeR456', 300, 8,`(703) 555-4058`),
+(9, 'Ana Torres', 'ana.torres@example.com', 'V66778800', 'anaT789', 150, 9,`(570) 345-8176`),
+(10, 'Felipe Hernandez', 'felipe.hernandez@example.com', 'V77889911', 'felipeH123', 200, 10,`(703) 366-1245`),
+(11, 'Gabriela Romero', 'gabriela.romero@example.com', 'V88990022', 'gabrielaR456', 90, 11,`(432) 625-6727`),
+(12, 'Ricardo Silva', 'ricardo.silva@example.com', 'V99001133', 'ricardoS789', 160, 12,`(751) 742-3679`),
+(13, 'Natalia Rivas', 'natalia.rivas@example.com', 'V00112244', 'nataliaR123', 250, 13,`(412) 303-7845`),
+(14, 'Julian Gomez', 'julian.gomez@example.com', 'V11223366', 'julianG456', 170, 14,`(926) 378-2275`),
+(15, 'Camila Castro', 'camila.castro@example.com', 'V22334477', 'camilaC789', 80, 15,`(519) 882-6688`),
+(16, 'Sebastian Vasquez', 'sebastian.vasquez@example.com', 'V33445588', 'sebastianV123', 220, 16,`(575) 203-2094`),
+(17, 'Daniela Mora', 'daniela.mora@example.com', 'V44556699', 'danielaM456', 130, 17,`(720) 756-1918`),
+(18, 'Mauricio Jimenez', 'mauricio.jimenez@example.com', 'V55667700', 'mauricioJ789', 140, 18,`(533) 875-6428`),
+(19, 'Laura Gomez', 'laura.gomez@example.com', 'V66778811', 'lauraG123', 250, 19,`(485) 806-4686`),
+(20, 'Andres Paredes', 'andres.paredes@example.com', 'V77889922', 'andresP456', 90, 20,`(868) 232-7891`),
+(21, 'Valeria Morales', 'valeria.morales@example.com', 'V88990033', 'valeriaM789', 110, 1,`(525) 271-1740`),
+(22, 'Javier Correa', 'javier.correa@example.com', 'V99001144', 'javierC123', 200, 2,`(914) 427-8733`);
 
 -- --------------------------------------------------------
 
